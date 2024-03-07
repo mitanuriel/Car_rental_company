@@ -32,8 +32,9 @@ public class MySQLConnection {
     }
 
 
-
-
+    public String prepareStatement(String query) {
+        return query;
+    }
 }
 
 

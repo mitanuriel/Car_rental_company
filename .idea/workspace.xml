@@ -4,25 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e4a796c-9c18-4dda-9f87-8ad5554ce8ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Car_rental_company.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/car_rental/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/car_rental/CarRentalManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/car_rental/CarType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/car_rental/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/car_rental/DateUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/car_rental/FirstPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/car_rental/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/car_rental/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/car_rental/MySQLConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/car_rental/Rental.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/car_rental/SecondPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/car_rental/ThirdPage.java" afterDir="false" />
+    <list default="true" id="8e4a796c-9c18-4dda-9f87-8ad5554ce8ff" name="Changes" comment="2nd commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/car_rental/CarRentalManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/car_rental/CarRentalManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/car_rental/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/car_rental/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/car_rental/MySQLConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/car_rental/MySQLConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,11 +64,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709806255053</updated>
-      <workItem from="1709806256899" duration="4849000" />
+      <workItem from="1709806256899" duration="7510000" />
     </task>
+    <task id="LOCAL-00001" summary="2nd commit">
+      <option name="closed" value="true" />
+      <created>1709812195981</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709812195982</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2nd commit">
+      <option name="closed" value="true" />
+      <created>1709812218292</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709812218292</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2nd commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="2nd commit" />
   </component>
 </project>

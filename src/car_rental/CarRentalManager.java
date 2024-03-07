@@ -1,9 +1,6 @@
 package car_rental;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -13,25 +10,19 @@ import java.util.List;
 public class CarRentalManager {
 
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/carRental";
+    private static final String USERNAME = "admin";
+    private static final String PASSWORD = "admin123";
 
-    public List<Car> getAllAvailableCars(Connection connection) {
+    public List<Car> getAllAvailableCars() {
         List<Car> availableCars = new ArrayList<>();
 
-        try {
-            String query = "SELECT * FROM Cars WHERE plate_number NOT IN (SELECT car_plate_number FROM Rental)";
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
-            ResultSet resultSet = preparedStatement.executeQuery();
+        try (Connection connection = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
+             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Cars WHERE plate_number NOT IN (SELECT car_plate_number FROM Rental)");
+             ResultSet resultSet = preparedStatement.executeQuery()) {
 
             while (resultSet.next()) {
-                int id = resultSet.getInt("id");
-                String carBrand = resultSet.getString("car_brand");
-                String carModel = resultSet.getString("car_model");
-                String fuelType = resultSet.getString("fuel_type");
-                String plateNum = resultSet.getString("plate_number");
-                String registrationDate = resultSet.getString("registration");
-                int mileageCounter = resultSet.getInt("mileage_counter");
-
-                availableCars.add(new Car(id, carBrand, carModel, fuelType, plateNum, registrationDate, mileageCounter));
+                availableCars.add(mapResultSetToCar(resultSet));
             }
 
         } catch (SQLException e) {
@@ -40,11 +31,10 @@ public class CarRentalManager {
 
         return availableCars;
     }
-
-    public void rentCar(Connection connection, Customer customer, Car car, Date rentalFrom, Date rentalTo, int totalKm) {
-        try {
-            String insertRentalQuery = "INSERT INTO Rental (rental_from, rental_to, total_km, customer_id, car_plate_number) VALUES (?, ?, ?, ?, ?)";
-            PreparedStatement insertRentalStatement = connection.prepareStatement(insertRentalQuery);
+    public void rentCar(Customer customer, Car car, Date rentalFrom, Date rentalTo, int totalKm) {
+        try (Connection connection = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
+             PreparedStatement insertRentalStatement = connection.prepareStatement(
+                     "INSERT INTO Rental (rental_from, rental_to, total_km, customer_id, car_plate_number) VALUES (?, ?, ?, ?, ?)")) {
 
             insertRentalStatement.setString(1, DATE_FORMAT.format(rentalFrom));
             insertRentalStatement.setString(2, DATE_FORMAT.format(rentalTo));
@@ -60,10 +50,10 @@ public class CarRentalManager {
         }
     }
 
-    public void returnCar(Connection connection, Rental rental, int returnedKm) {
-        try {
-            String updateRentalQuery = "UPDATE Rental SET total_km = ?, rental_to = ? WHERE id = ?";
-            PreparedStatement updateRentalStatement = connection.prepareStatement(updateRentalQuery);
+    public void returnCar(Rental rental, int returnedKm) {
+        try (Connection connection = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
+             PreparedStatement updateRentalStatement = connection.prepareStatement(
+                     "UPDATE Rental SET total_km = ?, rental_to = ? WHERE id = ?")) {
 
             updateRentalStatement.setInt(1, returnedKm);
             updateRentalStatement.setString(2, DATE_FORMAT.format(new Date()));
@@ -76,4 +66,17 @@ public class CarRentalManager {
             e.printStackTrace();
         }
     }
+
+    private Car mapResultSetToCar(ResultSet resultSet) throws SQLException {
+        return new Car(
+                resultSet.getInt("id"),
+                resultSet.getString("car_brand"),
+                resultSet.getString("car_model"),
+                resultSet.getString("fuel_type"),
+                resultSet.getString("plate_number"),
+                resultSet.getString("registration"),
+                resultSet.getInt("mileage_counter")
+        );
+    }
+
 }
