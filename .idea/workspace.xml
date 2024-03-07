@@ -1,11 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e4a796c-9c18-4dda-9f87-8ad5554ce8ff" name="Changes" comment="" />
+    <list default="true" id="8e4a796c-9c18-4dda-9f87-8ad5554ce8ff" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Car_rental_company.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/car_rental/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/car_rental/CarRentalManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/car_rental/CarType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/car_rental/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/car_rental/DateUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/car_rental/FirstPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/car_rental/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/car_rental/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/car_rental/MySQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/car_rental/Rental.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/car_rental/SecondPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/car_rental/ThirdPage.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -23,11 +53,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/elina/IdeaProjects/Car_rental_company/src/car_rental/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -39,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709806255053</updated>
-      <workItem from="1709806256899" duration="2000" />
+      <workItem from="1709806256899" duration="4849000" />
     </task>
     <servers />
   </component>
